@@ -1,8 +1,7 @@
 getwd()
 setwd("C:/Users/Ari/Desktop/Rscripts")
 getwd()
-read.csv("WorldCupMatches.csv", header = T)
-dfWCM <- read.csv("WorldCupMatches.csv",)
+dfWCM <- read.csv("WorldCupMatches.csv", header = T)
 
 # (a) Size of Data Frame: 852 Rows x 20 Columns
 rows = nrow(dfWCM)
@@ -18,6 +17,8 @@ summary(dfWCM)
 
 # (c) Unique Locations Olympics Were Held At: 151
 # Length() function counts the number of elements after the unique() function removes any duplicates
+# Group 5 is uncertain if unique locations was supposed to be Stadiums or City. Each city can have multiple stadiums.
+# Leighton from Group 5 suggested length(unique(dfWCM$Stadium)) if this was supposed to look for all unique stadium locations.
 locations = length(unique(dfWCM$City))
 print(locations)
 
